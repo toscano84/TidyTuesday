@@ -74,7 +74,7 @@ rank_text <- rank_text %>%
 map_tuition_graph1 <- usa_map_new %>% 
   ggplot() +
   geom_polygon(col = "white", aes(long, lat, group = group, fill = tuition)) +
-  geom_text(data = rank_text, aes(long, lat, label = ranking), family = "mono", size = 4) + coord_map() +
+  geom_text(data = rank_text, aes(long, lat, label = ranking), family = "mono", size = 3) + coord_map() +
   theme(panel.background = element_blank(), 
         plot.background = element_blank(),
         axis.text = element_blank(),
