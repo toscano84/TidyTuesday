@@ -26,8 +26,8 @@ avg_tuition_tidy_filter <- avg_tuition_tidy %>%
   filter(Year == "2015-16")# include only values of the year 2015-16
 
 # create new variable - ranking
-avg_tuition_tidy_filter$ranking <- rank(-avg_tuition_tidy_filter$Tuition) # create the variable ranking in relation to the value of tuition
-
+avg_tuition_tidy_filter$ranking <- rank(-avg_tuition_tidy_filter$Tuition) # create the variable ranking 
+                                                                    
 #lower the case of State variable
 avg_tuition_tidy_filter$State <- str_to_lower(avg_tuition$State)#to put the states with lower case as the map database
 
@@ -62,7 +62,7 @@ with(usa_map_new, mean(lat[id == "alaska"], na.rm = TRUE))
 with(usa_map_new, mean(long[id == "hawaii"], na.rm = TRUE))
 with(usa_map_new, mean(lat[id == "hawaii"], na.rm = TRUE))
 
-# assing the computed mean values to both states.NOTE: The lat value is not exactly correct. 
+# assign the computed mean values to both states. NOTE: The lat value for Alaska is not exactly correct. 
 # With the computed mean (26.30) the rank appeared outside of the state. Therefore, I changed it a bit to fit as I intend it to.
 rank_text <- rank_text %>%
   mutate(long = ifelse(id == "alaska", -117.12, long),
@@ -92,6 +92,7 @@ map_tuition_graph1
 
 #==data preparation for graph 2==#
 # use the avg_tuition_tidy_filter dataframe computed above
+#create variable tuition_levels
 avg_tuition_tidy_graph2 <- avg_tuition_tidy_filter %>%
   mutate(tuition_levels = case_when(tuition > mean(tuition, na.rm = TRUE) ~ "Above Average",
                           tuition < mean(tuition, na.rm = TRUE) ~ "Below Average")) 
