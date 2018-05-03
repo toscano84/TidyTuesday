@@ -32,7 +32,8 @@ avg_tuition_tidy_filter$ranking <- rank(-avg_tuition_tidy_filter$Tuition) # crea
 avg_tuition_tidy_filter$State <- str_to_lower(avg_tuition$State)#to put the states with lower case as the map database
 
 # lower the cases of all column names
-names(avg_tuition_tidy_filter) <- str_to_lower(names(avg_tuition_tidy_filter))
+avg_tuition_tidy_filter <- avg_tuition_tidy_filter %>%
+  select_all(str_to_lower)
 
 # load dataframe for the map of the USA
 usa_map <- fifty_states # assign fifty_states to a new dataframe called usa_map
