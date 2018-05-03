@@ -96,7 +96,8 @@ map_tuition_graph1
 #create variable tuition_levels
 avg_tuition_tidy_graph2 <- avg_tuition_tidy_filter %>%
   mutate(tuition_levels = case_when(tuition > mean(tuition, na.rm = TRUE) ~ "Above Average",
-                          tuition < mean(tuition, na.rm = TRUE) ~ "Below Average")) 
+                          tuition < mean(tuition, na.rm = TRUE) ~ "Below Average",
+                          TRUE ~ "USA Average")) 
 
 # add a new row with the average of the USA       
 avg_tuition_tidy_graph2 <- add_row(avg_tuition_tidy_graph2, state = "USA Average", 
