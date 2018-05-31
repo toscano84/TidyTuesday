@@ -112,7 +112,7 @@ eu_28 <- europe %>%
 eu_28_cancer_mortality <- global_mortality_tidy %>%
   left_join(eu_28, by = "country")
 
-# assing path to magick to enable the creation of gifs
+# assign path to magick to enable the creation of gifs
 magickPath <- shortPathName("C:/Program Files/ImageMagick-6.9.9-Q16-HDRI/convert.exe")
 
 # create a dataframe with the limits of Europe
