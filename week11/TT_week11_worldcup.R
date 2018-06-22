@@ -64,6 +64,7 @@ fifa <- fifa %>%
                                   country == "Yemen" ~ "YEM")) 
 
 # create the shape file of ASIA
+data(wrld_simpl)
 asia <- wrld_simpl[wrld_simpl$REGION == 142, ] 
 
 # list of Asian country codes
