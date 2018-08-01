@@ -9,7 +9,7 @@ library(htmlwidgets) # to save leaflet as an html file
 library(htmltools) # labels more compatible with html files
 library(leaflet.extras) # to add more tile options
 library(skimr) # summary statistics
-library(mapview) # to ave interactive map as an image
+library(mapview) # to save interactive map as an image
 
 
 # base tile
