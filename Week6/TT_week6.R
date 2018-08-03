@@ -76,7 +76,12 @@ pal_color <- colorFactor(palette = c("#007042",
 coffee_chains_interactive <- 
   #add coffe_chains to our map
   coffee_chains %>% 
-  leaflet() %>% 
+  leaflet(width = "100%", 
+        options = leafletOptions(preferCanvas = TRUE)) %>% 
+  addProviderTiles("CartoDB.DarkMatter", 
+                   options = providerTileOptions(
+                     updateWhenZooming = FALSE,
+                     updateWhenIdle = TRUE)) %>% 
   addProviderTiles("CartoDB.DarkMatter") %>% 
   addCircleMarkers(data = filter(coffee_chains, brand == "Starbucks"),# add brand filter
                    radius = 3,
