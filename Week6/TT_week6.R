@@ -82,11 +82,13 @@ coffee_chains_interactive <-
                    radius = 3,
                    label = ~htmlEscape(brand),
                    color = ~pal_color(brand),
+                   popup = ~paste0("<b>", brand),
                    group = "Starbucks") %>%
   addCircleMarkers(data = filter(coffee_chains, brand == "Dunkin' Donuts"),# add brand filter
                    radius = 3,
                    label = ~htmlEscape(brand),
-                   color = ~pal_color(brand), 
+                   color = ~pal_color(brand),
+                   popup = ~paste0("<b>", brand),
                    group = "Dunkin' Donuts" ) %>%
   # add legend
   addLegend(pal = pal_color, 
