@@ -9,7 +9,7 @@ library(readr)
 fast_food <- read_delim("fastfood_calories.txt", delim = ",")
 
 
-# function needed to use geom_flat_iolin
+# function needed to use geom_flat_violin - see code here https://github.com/tidyverse/ggplot2/issues/2459
 "%||%" <- function(a, b) {
   if (!is.null(a))
     a
