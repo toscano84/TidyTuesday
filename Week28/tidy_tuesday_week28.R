@@ -112,7 +112,7 @@ ggplot(aes(year, state, colour = state)) +
                                 "'92","'94", "'96", "'98","'00","'02", "'04", "'06",
                                 "'08",  "'10","'12", "'14")) +
   scale_color_manual(values = palette) +
-  labs(title = "Voter Turnout in Elections", subtitle = " From 1980 to 2012",
+  labs(title = "Voter Turnout in Elections", subtitle = " From 1980 to 2014",
        caption = "Source: Star Tribune", size = "Voter Turnout (%)") +
   facet_wrap( ~ region, scales = "free") +
   theme_fivethirtyeight() + 
