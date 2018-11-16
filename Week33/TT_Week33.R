@@ -31,7 +31,7 @@ top_5 <- malaria %>%
 plot_ani <- malaria %>%
   group_by(year, entity) %>%
   summarise(sum_deaths = sum(deaths)) %>%
-  filter(entity %in% top_10$country) %>%
+  filter(entity %in% top_5$country) %>%
   mutate(entity = case_when(entity == 
                               "Democratic Republic of Congo" ~ "DR Congo",
                             TRUE ~ entity)) %>%
