@@ -14,8 +14,6 @@ loadfonts(device = "win")
 
 # load data frame
 malaria <- fread("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018-11-13/malaria_deaths_age.csv")
-View(malaria)
-
 
 # five countries with more malaria mortality
 top_5 <- malaria %>%
