@@ -3,7 +3,6 @@ library(tidyverse)
 library(data.table)
 library(viridis)
 library(extrafont)
-library(extrafont)
 library(gganimate)
 
 options(scipen = 999)
