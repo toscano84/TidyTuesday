@@ -13,7 +13,7 @@ medium_tokens <- medium %>% unnest_tokens(word, input = title)
 
 # remove stopwords
 medium_tokens <- medium_tokens %>%
-  anti_join(get_stopwords(), by = "word")
+  anti_join(stop_words)
 
 # remove numbers
 rem_numbers <- medium_tokens %>% filter(str_detect(word, "^[0-9]")) %>% 
