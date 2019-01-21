@@ -1,13 +1,10 @@
 # week 1 2019 - TidyTuesday
 
 # load needed libraries
-library(tidyverse)
-library(lubridate)
-library(ggcal)
-library(viridis)
-library(ggdark)
-library(extrafont)
-library(ggthemes)
+library(tidyverse) # wrangle and visualize the data
+library(lubridate) # deal with dates
+library(viridis) # color palette
+library(extrafont) # add fonts to R
 
 # open file
 tweets <- readRDS("rstats_tweets.rds")
@@ -25,7 +22,7 @@ tweets_tidy <- tweets %>%
                                "Sat",
                                "Sun"), # create variable day of the week and relevel it
          month = month(created_at, label = TRUE), # create variable month
-         week = week(created_at)) %>% # create variable week of year
+         week = week(created_at)) %>% # create variable week of the year
   filter(year > 2013) %>% # only include last 5 years
   count(year, weekday, week, month)
 
