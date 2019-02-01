@@ -11,7 +11,7 @@ library(extrafont) # add fonts to R
 
 options(scipen = 999)
 
-# loead file
+# load file
 incarceration <- fread("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-01-22/incarceration_trends.csv")
 
 # tidy the dataframe
