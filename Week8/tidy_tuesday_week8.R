@@ -78,7 +78,7 @@ honey_totalprod <- honey_totalprod %>%
 us_hex <- geojson_read("us_states_hexgrid.geojson",  what = "sp")
 
 # fortify the data 
-us_hex@data = us_hex@data %>% mutate(google_name = gsub(" \\(United States\\)", "", google_name))
+us_hex@data <- us_hex@data %>% mutate(google_name = gsub(" \\(United States\\)", "", google_name))
 us_fortified <- tidy(us_hex, region = "google_name")
 
 # join both datasets
