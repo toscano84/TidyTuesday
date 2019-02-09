@@ -3,9 +3,9 @@
 library(tidyverse) # wrangle, visualization of data
 library(data.table) # load file
 library(extrafont) # add fonts to R
-library(gghighlight)
+library(gghighlight) # highlight values in a plot
 
-options(scipen = 999)
+options(scipen = 999) # remove scientific notation
 
 
 # load data frame
