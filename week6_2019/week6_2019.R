@@ -160,7 +160,7 @@ p <- ggplot() +
        subtitle = "From 2000 to 2018") +
   theme_void() +
   theme(panel.grid = element_blank(),
-    legend.position = c(0.5, 0.9),
+    legend.position = c(0.5, 0.87),
     axis.line = element_blank(),
     axis.text = element_blank(),
     plot.background = element_rect(fill = "#333333", color = NA), 
@@ -168,8 +168,8 @@ p <- ggplot() +
     legend.background = element_rect(fill = "#333333", color = NA),
     legend.text = element_text(size= 12, color = "grey50", family = "Cooper Black"),
     plot.title = element_text(size= 28, hjust=0.5, color = "grey50", family = "Cooper Black"),
-    plot.subtitle = element_text(size= 14, hjust=0.5, color = "grey50", family = "Cooper Black"),
-    legend.title = element_text(size= 16, hjust=0.5, color = "grey50", family = "Cooper Black")) +
+    plot.subtitle = element_text(size= 14, hjust=0.5, vjust = -5, color = "grey50", family = "Cooper Black"),
+    legend.title = element_text(size= 16, hjust=0.5, vjust = -5, color = "grey50", family = "Cooper Black")) +
   coord_map()
 
 p
