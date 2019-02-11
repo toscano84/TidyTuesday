@@ -110,7 +110,7 @@ new_breaks <- c(50,100,150,200,250,300)
 # find the min for the labels
 minvalue <- min(us_fortified$change_price_index, na.rm = T)
 
-# create lables
+# create labels
 labels <- c()
 breaks <- c(minvalue, new_breaks)
 # round the labels 
@@ -144,8 +144,6 @@ p <- ggplot() +
       keyheight = unit(3.4, units = "mm"),
       keywidth = unit(18, units = "mm"),
       title.position = 'top',
-      # I shift the labels around, the should be placed 
-      # exactly at the right end of each legend key
       title.hjust = 0.5,
       label.hjust = 1,
       nrow = 1,
@@ -172,7 +170,6 @@ p <- ggplot() +
     legend.title = element_text(size= 16, hjust=0.5, vjust = -5, color = "grey50", family = "Cooper Black")) +
   coord_map()
 
-p
 ggsave("hpi_index_changes.jpg", p, units = "cm", 
        height = 25, width = 40, dpi = "retina")
 
