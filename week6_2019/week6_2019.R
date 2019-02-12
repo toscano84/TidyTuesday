@@ -104,7 +104,6 @@ centers <- cbind.data.frame(data.frame(gCentroid(cartogram, byid=TRUE),
 
 #----plot-----#
 #---alter the key legend with specific breaks---
-# see 
 # create breaks
 new_breaks <- c(50,100,150,200,250,300)
 # find the min for the labels
