@@ -4,8 +4,8 @@ library(tidyverse) # wrangle, visualization data
 library(data.table) # load file
 library(viridis) # palette
 library(extrafont) # add new fonts to R
-library(waffle)
-library(extrafontdb)
+library(waffle) # create waffle plot
+
 
 
 options(scipen = 999) # remove scientific notation
