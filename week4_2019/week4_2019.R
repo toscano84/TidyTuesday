@@ -41,7 +41,7 @@ for(i in 1:length(quantiles)){
                              " - ", 
                              round(quantiles[i + 1], 2)))
 }
-# IRemove last label
+# Remove last label
 labels <- labels[1:length(labels)-1]
 
 # create new variable based on quantiles
